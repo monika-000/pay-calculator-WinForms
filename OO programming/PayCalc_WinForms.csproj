@@ -100,8 +100,8 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="PayCalculator.cs" />
-    <Compile Include="PayCalculatroNoTreshold.cs" />
-    <Compile Include="PayCalculatroWithTreshold.cs" />
+    <Compile Include="PayCalculatroForForeignResidents.cs" />
+    <Compile Include="PayCalculatroForResidents.cs" />
     <Compile Include="PaySlip.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
