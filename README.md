@@ -11,7 +11,7 @@ A Windows Form weekly pay calculator that calculates weekly gross and net pay, t
 
 ### Usage
 1. Open the application in Visual Studio.
-2. Update employeeDetails.csv, taxrate-residents.csv, taxrate-foreign-residents.csv files with your data. You can also run the program with the existing set of data. Please check the [Required CSV files section](#-required-csv-files) for detailed fields description.  
+2. Update employeeDetails.csv, taxrate-residents.csv, taxrate-foreign-residents.csv files with your data. You can also run the program with the existing set of data. Please check the [Required CSV files section](-required-csv-files) for detailed fields description.  
 3. Run application in Visual Studio.
 4. In the Windows Form Choose employee for whom you'd like to calculate pay, enter number of hours and click calculate button. The maximal number of hours you can enter is 40. 
 5. On the right hand side will be dispayed payment summary. Click save button to save data to CSV file. By default data will be saved in PaySlip folder. Document name will follow this pattern: "Pay_employeeId_fullName_date.csv"*.</br>
