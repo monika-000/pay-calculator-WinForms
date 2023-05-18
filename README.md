@@ -1,7 +1,7 @@
 # pay-calculator_WinForms
 
 ## Description
-This is a Windows Form weekly pay calculator that calculate weekly gorss and net pay, tax and supperannuation for residents and foreign residents by reading form and writing data to CSV.
+This is a Windows Form weekly pay calculator that calculate weekly gorss and net pay, tax and supperannuation for residents and foreign residents by reading form and writing data to CSV. Data provided in CSV files and formula for calculating tax is for Australian tax tresholds.
 
 ## How to use
 ### Setup
@@ -20,16 +20,16 @@ This is a Windows Form weekly pay calculator that calculate weekly gorss and net
 
 ## Required CSV files 
 Below you can find headers for each file. By default headers are not included.</br>
-**Please note:** this program is not set to ignore headers in CSV files, if you add them, it will treat it as row with normal data.  
-### employee.csv
-| Employee Id  | First name | Last name | Hourly rate |Has tax free treshold |
+**Please note:** this program is not set to ignore headers in CSV files, if you add them, it will treat it as row with normal data and throw an error when it tries to parse.  
+### employeeDetails.csv
+| Employee Id  | First name | Last name | Hourly rate |Is foreign resident or resident |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |  `integer` |  `string` | `string`  | `decimal` |`char`*   |
 
-**Values **Y** for Yes, **N** for No*
+**Status for tax purposes. Values **R** for Resident, **F** for Foreign Resident*
 
-### taxrate-nothreshold.csv and taxrate-withthreshold.csv
-| Weekly earnings min  | Weekly earnings max | Tax rates A | Tax rates B |
+### taxrate-residents.csv and taxrate-foreign-residents.csv
+| Weekly earnings min | Weekly earnings max | Tax rates | Base AUD added for each treshold |
 | ------------- | ------------- | ------------- | ------------- |
 |  `decimal` |   `decimal` |  `decimal`  | `decimal` |
 
