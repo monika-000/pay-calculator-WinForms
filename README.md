@@ -11,18 +11,18 @@ A Windows Form weekly pay calculator that calculates weekly gross and net pay, t
 
 ### Usage
 1. Open the application in Visual Studio.
-2. Update employeeDetails.csv, taxrate-residents.csv, taxrate-foreign-residents.csv files with your data. You can also run the program with the existing set of data. Please check the [Required CSV files section](-required-csv-files) for detailed fields description.  
-3. Run application in Visual Studio.
-4. In the Windows Form Choose employee for whom you'd like to calculate pay, enter number of hours and click calculate button. The maximal number of hours you can enter is 40. 
-5. On the right hand side will be dispayed payment summary. Click save button to save data to CSV file. By default data will be saved in PaySlip folder. Document name will follow this pattern: "Pay_employeeId_fullName_date.csv"*.</br>
+2. Update employeeDetails.csv, taxrate-residents.csv, taxrate-foreign-residents.csv files with your data. You can also run the program with the existing set of data. Please check the [Required CSV files section](#required-csv-files) for detailed fields description.  
+3. Run the application in Visual Studio.
+4. In the Windows Form Choose the employee for whom you'd like to calculate pay, enter the number of hours and click calculate button. The maximum number of hours you can enter is 40. 
+5. On the right-hand side will be displayed the payment summary. Click the save button to save data to a CSV file. By default, data will be saved in the PaySlip folder. Document name will follow this pattern: "Pay_employeeId_fullName_date.csv"*.</br>
 
 **date format YYYYMMDD HH:MM*
 
 ## Required CSV files 
-Below you can find headers for each file. By default headers are not included.</br>
-**Please note:** this program is not set to ignore headers in CSV files, if you add them, it will treat it as row with normal data and throw an error when it tries to parse.  
+Below you can find headers for each file. By default, headers are not included.</br>
+**Please note:** This program is not set to ignore headers in CSV files, if you add them, it will treat it as a row with normal data and throw an error when it tries to parse.  
 ### employeeDetails.csv
-| Employee Id  | First name | Last name | Hourly rate |Is foreign resident or resident |
+| Employee Id  | First name | Last name | Hourly rate |Is foreign resident or resident for tax purposes|
 | ------------- | ------------- | ------------- | ------------- | ------------- |
 |  `integer` |  `string` | `string`  | `decimal` |`char`*   |
 
@@ -34,7 +34,7 @@ Below you can find headers for each file. By default headers are not included.</
 |  `decimal` |   `decimal` |  `decimal`  | `decimal` |
 
 ### payslip CSV
-| Employee Id  | Hours worked | Hourly rate |Tax treshold |Gross pay |Net pay |Tax |Superannuation|
+| Employee Id  | Hours worked | Hourly rate |Tax threshold |Gross pay |Net pay |Tax |Superannuation|
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |------------- |
 |  `integer` |  `decimal` | `decimal`  | `decimal` |`decimal`   |`decimal`   |`decimal`  |`decimal`  |
 
