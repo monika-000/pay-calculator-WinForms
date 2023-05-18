@@ -97,7 +97,7 @@ namespace PayCalc_WinForms
         /// Method that reads tax rates A form taxrate-notreshold CSV file.
         /// </summary>
         /// <returns>A list of type decimals</returns>
-        public static List<decimal> taxRatesAForeignResidents()
+        public static List<decimal> taxRatesForeignResidents()
         {
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -121,7 +121,7 @@ namespace PayCalc_WinForms
         /// Method that reads tax rates B form taxrate-notreshold CSV file.
         /// </summary>
         /// <returns>A list of type decimals</returns>
-        public static List<decimal> taxRatesBForeignResidents()
+        public static List<decimal> taxRatesBaseForeignResidents()
         {
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -145,7 +145,7 @@ namespace PayCalc_WinForms
         /// Method that reads tax rates A form taxrate-withtreshold CSV file.
         /// </summary>
         /// <returns>A list of type decimals</returns>
-        public static List<decimal> taxRatesAResidents()
+        public static List<decimal> taxRatesResidents()
         {
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -169,7 +169,7 @@ namespace PayCalc_WinForms
         /// Method that reads tax rates B form taxrate-withtreshold CSV file.
         /// </summary>
         /// <returns>A list of type decimals</returns>
-        public static List<decimal> taxRatesBResidents()
+        public static List<decimal> taxRatesBaseResidents()
         {
             var config = new CsvConfiguration(CultureInfo.InvariantCulture)
             {
@@ -203,7 +203,7 @@ namespace PayCalc_WinForms
                 Delimiter = ","
             };
             string outputDir = GetPathToDataFolder();
-            string path = Path.Combine(outputDir, $"Pay_{id}_{fName}{lName}_{DateTime.Now.ToString("yyyyMMddhhmmss")}.csv");
+            string path = Path.Combine(outputDir, $"Pay_{id}_{fName}{lName}_{DateTime.Now.ToString("yyyyMMddhhmm")}.csv");
             var records = paySlip;
             using (var writer = new StreamWriter(path))
             using (var csv = new CsvWriter(writer, CultureInfo.InvariantCulture))

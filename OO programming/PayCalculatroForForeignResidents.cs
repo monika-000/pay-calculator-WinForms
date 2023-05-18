@@ -9,10 +9,10 @@ namespace PayCalc_WinForms
     /// <summary>
     /// Extends PayCalculator class handling No tax threshold
     /// </summary>
-    public class PayCalculatorNoThreshold : PayCalculator
+    public class PayCalculatorForeignResidents : PayCalculator
     {
        
-        public PayCalculatorNoThreshold(decimal hRate) : base(hRate) { }
+        public PayCalculatorForeignResidents(decimal hRate) : base(hRate) { }
         /// <inheritdoc cref="CalculateGrossPay"/>
         public override decimal CalculateGrossPay(decimal hrsWorked)
         {
@@ -45,17 +45,22 @@ namespace PayCalc_WinForms
         {
             decimal tax = 0;
             List<decimal> taxThresholds = DataExportImport.GetTaxTresholdsForeignResidents();
-            List<decimal> taxRatesA = DataExportImport.taxRatesAForeignResidents();
-            List<decimal> taxRatesB = DataExportImport.taxRatesBForeignResidents();
+            List<decimal> taxRates = DataExportImport.taxRatesForeignResidents();
+            List<decimal> taxBase = DataExportImport.taxRatesBaseForeignResidents();
 
             for (int i = 0; i < taxThresholds.Count; i++)
             {
-                decimal newPay = Math.Round(calculatedPay);
-                if (newPay < taxThresholds[i])
+                if(calculatedPay <= taxThresholds[i])
                 {
-                    tax = taxRatesA[i] * newPay - taxRatesB[i];
+                    tax = calculatedPay * taxRates[i] + taxBase[i];
                     break;
                 }
+                //decimal newPay = Math.Round(calculatedPay);
+                //if (newPay < taxThresholds[i])
+                //{
+                //    tax = taxRates[i] * newPay - taxBase[i];
+                //    break;
+                //}
             }
             return tax;
 

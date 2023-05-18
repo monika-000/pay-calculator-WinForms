@@ -9,10 +9,10 @@ namespace PayCalc_WinForms.Tests
     public class PayCalculatorForeignTest
     {
         //[Theory]
-        //[ClassData(typeof(PayCalculatorNoThreshold))]
+        //[ClassData(typeof(PayCalculatorForeignResidents))]
         //public void GetTax(decimal calculatedPay, decimal expected)
         //{
-        //    PayCalculatorNoThreshold payCalc = new PayCalculatorNoThreshold(hRate: 25);
+        //    PayCalculatorForeignResidents payCalc = new PayCalculatorForeignResidents(hRate: 25);
         //    decimal actual = payCalc.CalculateTax(calculatedPay);
 
         //    Assert.Equal(expected, actual);
@@ -23,7 +23,7 @@ namespace PayCalc_WinForms.Tests
         {
 
 
-            PayCalculatorNoThreshold payCalc = new PayCalculatorNoThreshold(hRate: 25);
+            PayCalculatorForeignResidents payCalc = new PayCalculatorForeignResidents(hRate: 25);
             decimal actual = payCalc.CalculateTax(calculatedPay: 1000);
             decimal expected = 283.0868m;
             Assert.Equal(expected, actual);
@@ -32,7 +32,7 @@ namespace PayCalc_WinForms.Tests
         [Fact]
         public void GetNetPay()
         {
-            PayCalculatorNoThreshold payCalc = new PayCalculatorNoThreshold(hRate: 25);
+            PayCalculatorForeignResidents payCalc = new PayCalculatorForeignResidents(hRate: 25);
             decimal actual = payCalc.CalculateNetPay(calculatedPay: 500, tax: 30.0431m);
             decimal expected = 500 - 30.0431m;
             expected = Decimal.Round(expected, 2);

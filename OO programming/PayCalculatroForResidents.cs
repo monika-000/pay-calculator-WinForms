@@ -44,8 +44,8 @@ namespace PayCalc_WinForms
         {
             decimal tax = 0;
             List<decimal> taxThresholds = DataExportImport.GetTaxTresholdsFoResidents();
-            List<decimal> taxRatesA = DataExportImport.taxRatesAResidents();
-            List<decimal> taxRatesB = DataExportImport.taxRatesBResidents();
+            List<decimal> taxRatesA = DataExportImport.taxRatesResidents();
+            List<decimal> taxRatesB = DataExportImport.taxRatesBaseResidents();
 
             for (int i = 0; i < taxThresholds.Count; i++)
             {

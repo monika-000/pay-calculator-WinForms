@@ -34,7 +34,7 @@ namespace PayCalc_WinForms
             decimal netPay = 0;
             decimal treshold = 0;
             PayCalculator payCalc = new PayCalculator(employee.HourlyRate);
-            PayCalculatorNoThreshold payCalcNoForeigner = new PayCalculatorNoThreshold(employee.HourlyRate);
+            PayCalculatorForeignResidents payCalcNoForeigner = new PayCalculatorForeignResidents(employee.HourlyRate);
             PayCalculatorWithThreshold payCalcResident = new PayCalculatorWithThreshold(employee.HourlyRate);
             string message = "The number of hours can't be greater than 40 and has to be a number";
             string msg = "Error";
@@ -63,7 +63,7 @@ namespace PayCalc_WinForms
                 }
                 PaySlip paySlip = new PaySlip(employee.EmployeeID, hours, employee.HourlyRate, treshold, grossPay, tax, super, netPay);
 
-                string textToDisplay = $"{paySlip.EmployeeID}{Environment.NewLine}{employee.FirstName}{employee.LastName}{Environment.NewLine}{paySlip.HoursWorked}{Environment.NewLine}{paySlip.HourlyRate}{Environment.NewLine}{paySlip.TaxTreshold}{Environment.NewLine}{grossPay}{Environment.NewLine}{paySlip.NetPay}{Environment.NewLine}{paySlip.Tax}{Environment.NewLine}{paySlip.Supperanuation}";
+                string textToDisplay = $"{paySlip.EmployeeID}{Environment.NewLine}{employee.FirstName} {employee.LastName}{Environment.NewLine}{paySlip.HoursWorked}{Environment.NewLine}{paySlip.HourlyRate}{Environment.NewLine}{paySlip.TaxTreshold}{Environment.NewLine}{grossPay}{Environment.NewLine}{paySlip.NetPay}{Environment.NewLine}{paySlip.Tax}{Environment.NewLine}{paySlip.Supperanuation}";
 
                 paySlip_textBox.Text = textToDisplay;
             }

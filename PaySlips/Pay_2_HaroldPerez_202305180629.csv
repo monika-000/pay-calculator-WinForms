@@ -1,0 +1,2 @@
+EmployeeID,HoursWorked,HourlyRate,TaxTreshold,GrossPay,NetPay,Tax,Supperanuation
+2,30,35,2500,1050,814.83,235.166667,110.250
