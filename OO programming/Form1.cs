@@ -78,12 +78,22 @@ namespace PayCalc_WinForms
             List<string> payslipData = new List<string>();
             payslipData.AddRange(textBoxData);
             payslipData.RemoveRange(1, 2);
+            try
+            {
+                DataExportImport.WritingToCSV(textBoxData[0], textBoxData[1], textBoxData[2], payslipData);
+                string message = "Successfully saved to a file";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                string msg = "Success";
+                MessageBox.Show(message, msg, buttons);
+            }
+            catch(Exception err)
+            {
+                string message = "Something went wrong, please try again";
+                MessageBoxButtons buttons = MessageBoxButtons.OK;
+                string msg = "Error";
+                MessageBox.Show(message, msg, buttons);
+            }
             
-            DataExportImport.WritingToCSV(textBoxData[0], textBoxData[1], textBoxData[2], payslipData);
-            string message = "Succesfully saved to a file";
-            MessageBoxButtons buttons = MessageBoxButtons.OK;
-            string msg = "Success";
-            MessageBox.Show(message, msg, buttons);
 
         }
         private void textBox1_TextChanged(object sender, EventArgs e) { }
