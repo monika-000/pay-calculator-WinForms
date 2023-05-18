@@ -1,7 +1,7 @@
 # pay-calculator_WinForms
 
 ## Description
-This is a Windows Form weekly pay calculator that calculate weekly gorss and net pay, tax and supperannuation for residents and foreign residents by reading form and writing data to CSV. Data provided in CSV files and formula for calculating tax is for Australian tax tresholds.
+A Windows Form weekly pay calculator that calculates weekly gross and net pay, tax and superannuation for residents and foreign residents by reading from and writing data to CSV. Data is provided in CSV files, and the formula for calculating the tax, is for Australian tax thresholds.
 
 ## How to use
 ### Setup
@@ -10,8 +10,8 @@ This is a Windows Form weekly pay calculator that calculate weekly gorss and net
  3. Build the solution and check for any errors. 
 
 ### Usage
-1. Open application in Visual Studio.
-2. Update employeeDetails.csv, taxrate-residents.csv, taxrate-foreign-residents.csv files with your data. You can also run program with the existing set of data. Please check Required CSV files section for the detailed fields description. 
+1. Open the application in Visual Studio.
+2. Update employeeDetails.csv, taxrate-residents.csv, taxrate-foreign-residents.csv files with your data. You can also run the program with the existing set of data. Please check the [Required CSV files section](required-csv-files) for detailed fields description.  
 3. Run application in Visual Studio.
 4. In the Windows Form Choose employee for whom you'd like to calculate pay, enter number of hours and click calculate button. The maximal number of hours you can enter is 40. 
 5. On the right hand side will be dispayed payment summary. Click save button to save data to CSV file. By default data will be saved in PaySlip folder. Document name will follow this pattern: "Pay_employeeId_fullName_date.csv"*.</br>
