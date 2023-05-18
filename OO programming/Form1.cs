@@ -36,7 +36,7 @@ namespace PayCalc_WinForms
             PayCalculator payCalc = new PayCalculator(employee.HourlyRate);
             PayCalculatorForeignResidents payCalcNoForeigner = new PayCalculatorForeignResidents(employee.HourlyRate);
             PayCalculatorWithThreshold payCalcResident = new PayCalculatorWithThreshold(employee.HourlyRate);
-            string message = "The number of hours can't be greater than 40 and has to be a number";
+            string message = "The number of hours can't be greater than 40 and has to be a number.";
             string msg = "Error";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
 
@@ -81,14 +81,14 @@ namespace PayCalc_WinForms
             try
             {
                 DataExportImport.WritingToCSV(textBoxData[0], textBoxData[1], textBoxData[2], payslipData);
-                string message = "Successfully saved to a file";
+                string message = "Successfully saved to a file.";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 string msg = "Success";
                 MessageBox.Show(message, msg, buttons);
             }
             catch(Exception err)
             {
-                string message = "Something went wrong, please try again";
+                string message = "Something went wrong, please try again.";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 string msg = "Error";
                 MessageBox.Show(message, msg, buttons);
