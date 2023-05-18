@@ -34,8 +34,8 @@ namespace PayCalc_WinForms
             decimal netPay = 0;
             decimal treshold = 0;
             PayCalculator payCalc = new PayCalculator(employee.HourlyRate);
-            PayCalculatorNoThreshold payCalcNoTres = new PayCalculatorNoThreshold(employee.HourlyRate);
-            PayCalculatorWithThreshold payCalcWithTres = new PayCalculatorWithThreshold(employee.HourlyRate);
+            PayCalculatorNoThreshold payCalcNoForeigner = new PayCalculatorNoThreshold(employee.HourlyRate);
+            PayCalculatorWithThreshold payCalcResident = new PayCalculatorWithThreshold(employee.HourlyRate);
             string message = "The number of hours can't be greater than 40 and has to be a number";
             string msg = "Error";
             MessageBoxButtons buttons = MessageBoxButtons.OK;
@@ -50,20 +50,20 @@ namespace PayCalc_WinForms
                 decimal super = payCalc.CalculateSuper(grossPay);
                 switch (employee.TaxClaimed)
                 {
-                    case 'Y':
-                        treshold = payCalcWithTres.GetTreshold(grossPay);
-                        tax = payCalcWithTres.CalculateTax(grossPay);
-                        netPay = payCalcWithTres.CalculateNetPay(grossPay, tax);
+                    case 'R':
+                        treshold = payCalcResident.GetTreshold(grossPay);
+                        tax = payCalcResident.CalculateTax(grossPay);
+                        netPay = payCalcResident.CalculateNetPay(grossPay, tax);
                         break;
-                    case 'N':
-                        treshold = payCalcNoTres.GetTreshold(grossPay);
-                        tax = payCalcNoTres.CalculateTax(grossPay);
-                        netPay = payCalcNoTres.CalculateNetPay(grossPay, tax);
+                    case 'F':
+                        treshold = payCalcNoForeigner.GetTreshold(grossPay);
+                        tax = payCalcNoForeigner.CalculateTax(grossPay);
+                        netPay = payCalcNoForeigner.CalculateNetPay(grossPay, tax);
                         break;
                 }
                 PaySlip paySlip = new PaySlip(employee.EmployeeID, hours, employee.HourlyRate, treshold, grossPay, tax, super, netPay);
 
-                string textToDisplay = $"{paySlip.EmployeeID}{Environment.NewLine}{employee.FirstName} {employee.LastName}{Environment.NewLine}{paySlip.HoursWorked}{Environment.NewLine}{paySlip.HourlyRate}{Environment.NewLine}{paySlip.TaxTreshold}{Environment.NewLine}{grossPay}{Environment.NewLine}{paySlip.NetPay}{Environment.NewLine}{paySlip.Tax}{Environment.NewLine}{paySlip.Supperanuation}";
+                string textToDisplay = $"{paySlip.EmployeeID}{Environment.NewLine}{employee.FirstName}{employee.LastName}{Environment.NewLine}{paySlip.HoursWorked}{Environment.NewLine}{paySlip.HourlyRate}{Environment.NewLine}{paySlip.TaxTreshold}{Environment.NewLine}{grossPay}{Environment.NewLine}{paySlip.NetPay}{Environment.NewLine}{paySlip.Tax}{Environment.NewLine}{paySlip.Supperanuation}";
 
                 paySlip_textBox.Text = textToDisplay;
             }

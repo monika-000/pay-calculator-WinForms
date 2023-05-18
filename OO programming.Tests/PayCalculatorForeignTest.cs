@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PayCalc_WinForms.Tests
 {
-    public class PayCalculatorNoTresholdTest
+    public class PayCalculatorForeignTest
     {
         //[Theory]
         //[ClassData(typeof(PayCalculatorNoThreshold))]

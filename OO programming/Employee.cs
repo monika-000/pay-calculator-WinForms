@@ -13,7 +13,7 @@ namespace PayCalc_WinForms
  /// that you use for a employee last name.
  /// The <see cref="_hrlRate"/> is a <see langword="decimal"/>
  /// that you use for a hourly rate.
- /// The <see cref=" _taxStatus"/> is a <see langword="decimal"/>
+ /// The <see cref=" _taxType"/> is a <see langword="decimal"/>
  /// that you use for a employee tax status(tax free treshold claimed or not claimed).
  /// </remarks>
     public class Employee
@@ -27,7 +27,7 @@ namespace PayCalc_WinForms
         [Index(3)]
         private decimal _hrlRate;
         [Index(4)]
-        private char _taxStatus;
+        private char _taxType;
 
         public Employee(int empID, string fName, string lName, decimal hRate, char tClaimed)
         {
@@ -36,7 +36,7 @@ namespace PayCalc_WinForms
             _firstName = fName;
             _lastName = lName;
             _hrlRate = hRate;
-            _taxStatus = tClaimed;
+            _taxType = tClaimed;
         }
         /// <inheritdoc cref="_employeeID"/>
         public int EmployeeID
@@ -70,12 +70,12 @@ namespace PayCalc_WinForms
                 return _hrlRate;
             }
         }
-        /// <inheritdoc cref="_taxStatus"/>
+        /// <inheritdoc cref="_taxType"/>
         public char TaxClaimed
         {
             get
             {
-                return _taxStatus;
+                return _taxType;
             }
         }
         public override string ToString()

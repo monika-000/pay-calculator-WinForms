@@ -3,7 +3,7 @@ using Xunit;
 
 namespace PayCalc_WinForms.Tests
 {
-    public class PayCalculatorWithTresholdTest
+    public class PayCalculatorResidentsTest
     {
         [Fact]
         public void GetTax()
