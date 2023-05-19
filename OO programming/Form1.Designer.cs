@@ -72,7 +72,7 @@ namespace PayCalc_WinForms
             // 
             // btn_calculate
             // 
-            this.btn_calculate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_calculate.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_calculate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_calculate.Location = new System.Drawing.Point(125, 261);
             this.btn_calculate.Margin = new System.Windows.Forms.Padding(2);
@@ -223,7 +223,7 @@ namespace PayCalc_WinForms
             // 
             // btn_save
             // 
-            this.btn_save.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_save.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btn_save.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btn_save.Location = new System.Drawing.Point(125, 261);
