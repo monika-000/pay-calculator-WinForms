@@ -35,17 +35,17 @@ namespace PayCalc_WinForms
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.EmployeeID = new System.Windows.Forms.Label();
             this.btn_save = new System.Windows.Forms.Button();
             this.paySlip_textBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -72,18 +72,21 @@ namespace PayCalc_WinForms
             // 
             // btn_calculate
             // 
-            this.btn_calculate.Location = new System.Drawing.Point(158, 284);
+            this.btn_calculate.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_calculate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_calculate.Location = new System.Drawing.Point(125, 261);
             this.btn_calculate.Margin = new System.Windows.Forms.Padding(2);
             this.btn_calculate.Name = "btn_calculate";
             this.btn_calculate.Size = new System.Drawing.Size(68, 19);
             this.btn_calculate.TabIndex = 4;
             this.btn_calculate.Text = "Calculate";
-            this.btn_calculate.UseVisualStyleBackColor = true;
+            this.btn_calculate.UseVisualStyleBackColor = false;
             this.btn_calculate.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.listBox1);
+            this.groupBox1.Controls.Add(this.btn_calculate);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.txtHour);
             this.groupBox1.Location = new System.Drawing.Point(34, 22);
@@ -97,6 +100,7 @@ namespace PayCalc_WinForms
             // 
             // listBox1
             // 
+            this.listBox1.ForeColor = System.Drawing.SystemColors.WindowText;
             this.listBox1.FormattingEnabled = true;
             this.listBox1.Location = new System.Drawing.Point(22, 39);
             this.listBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -127,9 +131,90 @@ namespace PayCalc_WinForms
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Payment Summary";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.SystemColors.Window;
+            this.label9.Location = new System.Drawing.Point(25, 143);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 13);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Superannuation";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.SystemColors.Window;
+            this.label8.Location = new System.Drawing.Point(25, 130);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(25, 13);
+            this.label8.TabIndex = 9;
+            this.label8.Text = "Tax";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.SystemColors.Window;
+            this.label7.Location = new System.Drawing.Point(25, 117);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(44, 13);
+            this.label7.TabIndex = 8;
+            this.label7.Text = "Net pay";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.SystemColors.Window;
+            this.label6.Location = new System.Drawing.Point(25, 104);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(54, 13);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Gross pay";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.SystemColors.Window;
+            this.label5.Location = new System.Drawing.Point(25, 91);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 13);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Tax treshold";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.Window;
+            this.label4.Location = new System.Drawing.Point(25, 78);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.TabIndex = 5;
+            this.label4.Text = "Hourly rate";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.SystemColors.Window;
+            this.label3.Location = new System.Drawing.Point(25, 65);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(73, 13);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "Hours worked";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(25, 52);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(52, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Full name";
+            // 
             // EmployeeID
             // 
             this.EmployeeID.AutoSize = true;
+            this.EmployeeID.BackColor = System.Drawing.SystemColors.Window;
             this.EmployeeID.Location = new System.Drawing.Point(25, 39);
             this.EmployeeID.Name = "EmployeeID";
             this.EmployeeID.Size = new System.Drawing.Size(64, 13);
@@ -138,17 +223,21 @@ namespace PayCalc_WinForms
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(136, 261);
+            this.btn_save.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btn_save.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_save.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_save.Location = new System.Drawing.Point(125, 261);
             this.btn_save.Margin = new System.Windows.Forms.Padding(2);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(56, 19);
+            this.btn_save.Size = new System.Drawing.Size(68, 19);
             this.btn_save.TabIndex = 1;
             this.btn_save.Text = "Save";
-            this.btn_save.UseVisualStyleBackColor = true;
+            this.btn_save.UseVisualStyleBackColor = false;
             this.btn_save.Click += new System.EventHandler(this.button2_Click);
             // 
             // paySlip_textBox
             // 
+            this.paySlip_textBox.BackColor = System.Drawing.SystemColors.Window;
             this.paySlip_textBox.Location = new System.Drawing.Point(17, 35);
             this.paySlip_textBox.Margin = new System.Windows.Forms.Padding(2);
             this.paySlip_textBox.Multiline = true;
@@ -158,89 +247,17 @@ namespace PayCalc_WinForms
             this.paySlip_textBox.TabIndex = 0;
             this.paySlip_textBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(25, 52);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(52, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Full name";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(25, 65);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Hours worked";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(25, 78);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "Hourly rate";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 91);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 13);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "Tax treshold";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(25, 104);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Gross pay";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(25, 117);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 13);
-            this.label7.TabIndex = 8;
-            this.label7.Text = "Net pay";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(25, 130);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(25, 13);
-            this.label8.TabIndex = 9;
-            this.label8.Text = "Tax";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(25, 143);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 13);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Superannuation";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(551, 366);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.btn_calculate);
             this.Controls.Add(this.groupBox1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
-            this.Text = "Weekly Payment Calculator";
+            this.Text = "Payment Calculator";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
