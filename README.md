@@ -20,7 +20,7 @@ A Windows Form weekly pay calculator that calculates weekly gross and net pay, t
 
 ## Required CSV files 
 Below you can find headers for each file. By default, headers are not included.</br>
-**Please note:** This program is not set to ignore headers in CSV files, if you add them, it will treat it as a row with normal data and throw an error when it tries to parse.  
+**Please note:** This program is not set to ignore headers in CSV files, if you add them, it will treat it as a row with normal data and throw an error when it tries to parse the data.  
 ### employeeDetails.csv
 | Employee Id  | First name | Last name | Hourly rate |Is foreign resident or resident for tax purposes|
 | ------------- | ------------- | ------------- | ------------- | ------------- |
